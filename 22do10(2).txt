@@ -1,0 +1,28 @@
+using System;
+
+namespace aula26
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] num = { 6, 2, 7, 0, 1, 9, 3, 8, 4, 5 };
+            int[,] mat = new int[3, 4] { { 7, 2, 5, 0 }, { 10, 3, 1, 4 }, { 8, 9, 12, 11 } };
+
+            Console.BackgroundColor = ConsoleColor.Magenta;
+
+            Operacoes om = new Operacoes();
+
+            int maiorVetor = om.RetornaMaiorValor(num);
+            int maiorMatriz = om.RetornaMaiorValor(mat);
+
+            Console.WriteLine($"Maior do array {maiorVetor}");
+            Console.WriteLine($"Maior do array {maiorMatriz}");
+
+            int menorArray = om.RetornaMenorValor(num);
+            int menorMatriz = om.RetornaMenprValor(mat);
+            Console.WriteLine($"Menor do array {menorArray}");
+            Console.WriteLine($"Menor da matriz {menorMatriz}");
+        }
+    }
+}

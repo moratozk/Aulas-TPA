@@ -1,0 +1,61 @@
+using System;
+
+public class Operacoes
+{
+    public int RetornaMaiorValor(int[] vetor)
+    {
+        int maior = 0;
+        for (int i = 0; i < vetor.Length; i++)
+        {
+            if (vetor[i] > maior)
+            {
+                maior = vetor[i];
+                Console.Beep();
+            }
+        }
+        return maior;
+    }
+    public int RetornaMaiorValor(int[,] matriz)
+    {
+        int maior = 0;
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                if (matriz[i, j] > maior)
+                {
+                    maior = matriz[i, j];
+                }
+            }
+        }
+        return maior;
+    }
+    public int RetornaMenorValor(int[] vetor)
+    {
+        int menor = vetor[0];
+
+        for (int i = 0;i < vetor.Length; i++)
+        {
+            if (vetor[i] < menor)
+            {
+                menor = vetor[i];
+            }
+        }
+        return menor;
+    }
+    public int RetornaMenprValor(int[,] matriz)
+    {
+        int menor = 0;
+        for (int i = 0; i < matriz.GetLength(0); i++)
+        {
+            for (int j = 0; j < matriz.GetLength(1); j++)
+            {
+                if (matriz[i, j] > menor)
+                {
+                    menor = matriz[i, j];
+                }
+            }
+        }
+        return menor;
+    }
+}
